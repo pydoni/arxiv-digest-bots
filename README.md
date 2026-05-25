@@ -4,6 +4,8 @@ Daily curated ArXiv paper digests for data professionals, delivered via Telegram
 
 Each bot targets a specific role in the data field, with tailored topic filters and role-aware summarization powered by an LLM.
 
+**[Support this project](https://wise.com/pay/me/pedrohenriquef557?utm_source=request_flow)** - Help cover the LLM token costs that keep these digests running.
+
 ## How it works
 
 ```
@@ -87,59 +89,6 @@ arxiv-ai-digest/
 | Delivery | Telegram Bot API (urllib, no SDK dependency) |
 | Scheduling | GitHub Actions (cron, matrix strategy) |
 | Config | YAML per bot role |
-
-## Setup
-
-### 1. Fork and clone
-
-```bash
-git clone https://github.com/<your-username>/arxiv-ai-digest.git
-cd arxiv-ai-digest
-```
-
-### 2. Create Telegram Bots
-
-Create a bot via [@BotFather](https://t.me/BotFather) on Telegram for each role you want. Save each token.
-
-### 3. Create Telegram Channels
-
-For each bot:
-1. Create a public channel on Telegram (e.g. `@arxiv_ml_engineer_digest`)
-2. Add the bot as an **administrator** with permission to **Post Messages**
-3. Post any message in the channel
-4. Visit `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy the `chat.id` (negative number)
-
-### 4. Configure GitHub Secrets
-
-Go to your repo Settings > Secrets and variables > Actions, and add:
-
-- `ANTHROPIC_API_KEY` - your Anthropic API key
-- For each bot: `TELEGRAM_BOT_TOKEN_<NAME>` and `TELEGRAM_CHAT_ID_<NAME>`
-
-Example for the ML Engineer bot:
-- `TELEGRAM_BOT_TOKEN_ML_ENGINEER` = `123456:ABC...`
-- `TELEGRAM_CHAT_ID_ML_ENGINEER` = `-100123456789`
-
-### 5. Run
-
-The workflow runs automatically Mon-Fri at 8am BRT. To trigger manually:
-- Go to Actions > Daily ArXiv Digest > Run workflow
-
-### Local Testing
-
-```bash
-cp .env.example .env
-# Fill in your keys
-
-pip install -e .
-python -m src.main ml_engineer
-```
-
-## Cost
-
-- **GitHub Actions**: ~55 min/month (free tier: 2000 min)
-- **Anthropic Haiku**: ~$1.50/month
-- **Telegram**: Free
 
 ## Create Your Own Bot
 
@@ -248,14 +197,3 @@ Keywords are matched against the paper title and abstract (case-insensitive). Ti
    ```
 
 4. Push and your new bot will run with the next scheduled digest.
-
-### Step 4: Test locally
-
-```bash
-# Add to your .env
-TELEGRAM_BOT_TOKEN_NLP_RESEARCHER=your_token
-TELEGRAM_CHAT_ID_NLP_RESEARCHER=your_chat_id
-
-# Run
-python -m src.main nlp_researcher
-```
