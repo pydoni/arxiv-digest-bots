@@ -23,6 +23,18 @@ keywords:
 - knowledge distillation
 - continuous training
 - experiment tracking
+- batch inference
+- online learning
+- model registry
+- a/b testing
+- canary deployment
+- containerization
+- microservice
+- latency
+- throughput
+- gpu optimization
+- onnx
+- tensorrt
 summary_prompt: 'Summarize this paper in 3 concise bullet points. Focus on the practical
   impact for an ML Engineer who deploys models to production. Highlight: technique
   used, performance/efficiency gains, and real-world applicability.'

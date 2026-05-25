@@ -26,6 +26,22 @@ keywords:
 - diffusion model
 - neural radiance field
 - scene understanding
+- optical flow
+- image segmentation
+- semantic segmentation
+- instance segmentation
+- panoptic
+- gan
+- generative adversarial
+- contrastive learning
+- self-supervised
+- foundation model
+- vision language
+- zero-shot
+- few-shot
+- lidar
+- autonomous driving
+- medical imaging
 summary_prompt: 'Summarize this paper in 3 concise bullet points. Focus on the technical
   advancement for a Computer Vision engineer. Highlight: proposed architecture/method,
   benchmark metrics, and deployment feasibility.'

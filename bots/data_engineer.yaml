@@ -26,6 +26,20 @@ keywords:
 - batch processing
 - real-time analytics
 - data governance
+- delta lake
+- iceberg
+- hudi
+- kafka
+- flink
+- dbt
+- data contract
+- data observability
+- cdc
+- change data capture
+- materialized view
+- indexing
+- caching
+- distributed system
 summary_prompt: 'Summarize this paper in 3 concise bullet points. Focus on the relevance
   for a Data Engineer building pipelines and infrastructure. Highlight: scale problem
   solved, proposed technique, and performance benchmarks.'
