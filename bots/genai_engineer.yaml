@@ -1,0 +1,36 @@
+name: AI/GenAI Engineer
+emoji: 🤖
+description: Relevant papers for those who build applications with LLMs and generative
+  AI
+arxiv_categories:
+- cs.CL
+- cs.AI
+- cs.LG
+- cs.IR
+keywords:
+- large language model
+- retrieval augmented generation
+- rag
+- agent
+- tool use
+- function calling
+- prompting
+- prompt engineering
+- fine-tuning
+- instruction tuning
+- guardrails
+- embedding
+- code generation
+- chain of thought
+- in-context learning
+- reasoning
+- hallucination
+- grounding
+- vector database
+- semantic search
+summary_prompt: 'Summarize this paper in 3 concise bullet points. Focus on the applicability
+  for an engineer building products with LLMs. Highlight: technique, how to implement
+  it, and gains in quality/cost/latency.'
+max_papers: 15
+telegram_token_env: TELEGRAM_BOT_TOKEN_GENAI_ENGINEER
+telegram_chat_id_env: TELEGRAM_CHAT_ID_GENAI_ENGINEER

@@ -1,0 +1,31 @@
+name: ML Engineer
+emoji: ⚙️
+description: Relevant papers for those who build and deploy models to production
+arxiv_categories:
+- cs.LG
+- cs.AI
+- cs.DC
+- cs.SE
+keywords:
+- mlops
+- model serving
+- model deployment
+- distributed training
+- feature store
+- pipeline
+- monitoring
+- drift detection
+- automl
+- inference optimization
+- model compression
+- quantization
+- pruning
+- knowledge distillation
+- continuous training
+- experiment tracking
+summary_prompt: 'Summarize this paper in 3 concise bullet points. Focus on the practical
+  impact for an ML Engineer who deploys models to production. Highlight: technique
+  used, performance/efficiency gains, and real-world applicability.'
+max_papers: 15
+telegram_token_env: TELEGRAM_BOT_TOKEN_ML_ENGINEER
+telegram_chat_id_env: TELEGRAM_CHAT_ID_ML_ENGINEER

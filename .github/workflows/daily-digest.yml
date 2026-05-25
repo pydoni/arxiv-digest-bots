@@ -1,0 +1,45 @@
+name: Daily ArXiv Digest
+
+on:
+  schedule:
+    # 8h BRT (11h UTC), Monday-Friday (ArXiv doesn't publish on weekends)
+    - cron: "0 11 * * 1-5"
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        bot:
+          - ml_engineer
+          - data_scientist
+          - genai_engineer
+          - cv_engineer
+          - data_engineer
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -e .
+
+      - name: Run ${{ matrix.bot }} digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN_ML_ENGINEER: ${{ secrets.TELEGRAM_BOT_TOKEN_ML_ENGINEER }}
+          TELEGRAM_CHAT_ID_ML_ENGINEER: ${{ secrets.TELEGRAM_CHAT_ID_ML_ENGINEER }}
+          TELEGRAM_BOT_TOKEN_DATA_SCIENTIST: ${{ secrets.TELEGRAM_BOT_TOKEN_DATA_SCIENTIST }}
+          TELEGRAM_CHAT_ID_DATA_SCIENTIST: ${{ secrets.TELEGRAM_CHAT_ID_DATA_SCIENTIST }}
+          TELEGRAM_BOT_TOKEN_GENAI_ENGINEER: ${{ secrets.TELEGRAM_BOT_TOKEN_GENAI_ENGINEER }}
+          TELEGRAM_CHAT_ID_GENAI_ENGINEER: ${{ secrets.TELEGRAM_CHAT_ID_GENAI_ENGINEER }}
+          TELEGRAM_BOT_TOKEN_CV_ENGINEER: ${{ secrets.TELEGRAM_BOT_TOKEN_CV_ENGINEER }}
+          TELEGRAM_CHAT_ID_CV_ENGINEER: ${{ secrets.TELEGRAM_CHAT_ID_CV_ENGINEER }}
+          TELEGRAM_BOT_TOKEN_DATA_ENGINEER: ${{ secrets.TELEGRAM_BOT_TOKEN_DATA_ENGINEER }}
+          TELEGRAM_CHAT_ID_DATA_ENGINEER: ${{ secrets.TELEGRAM_CHAT_ID_DATA_ENGINEER }}
+        run: python -m src.main ${{ matrix.bot }}

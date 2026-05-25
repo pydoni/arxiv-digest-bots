@@ -1,0 +1,34 @@
+name: CV Engineer
+emoji: 👁️
+description: Relevant papers for those who work with computer vision
+arxiv_categories:
+- cs.CV
+- cs.AI
+- cs.LG
+- cs.RO
+keywords:
+- object detection
+- segmentation
+- image generation
+- image classification
+- 3d vision
+- point cloud
+- depth estimation
+- edge deployment
+- video understanding
+- action recognition
+- ocr
+- face recognition
+- pose estimation
+- image restoration
+- super resolution
+- visual transformer
+- diffusion model
+- neural radiance field
+- scene understanding
+summary_prompt: 'Summarize this paper in 3 concise bullet points. Focus on the technical
+  advancement for a Computer Vision engineer. Highlight: proposed architecture/method,
+  benchmark metrics, and deployment feasibility.'
+max_papers: 15
+telegram_token_env: TELEGRAM_BOT_TOKEN_CV_ENGINEER
+telegram_chat_id_env: TELEGRAM_CHAT_ID_CV_ENGINEER

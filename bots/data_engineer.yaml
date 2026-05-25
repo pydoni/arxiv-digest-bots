@@ -1,0 +1,34 @@
+name: Data Engineer
+emoji: 🛠️
+description: Relevant papers for those who build data infrastructure and pipelines
+arxiv_categories:
+- cs.DB
+- cs.DC
+- cs.SE
+- cs.PF
+keywords:
+- data pipeline
+- stream processing
+- lakehouse
+- data quality
+- data lineage
+- orchestration
+- query optimization
+- schema evolution
+- data lake
+- etl
+- data warehouse
+- data mesh
+- data catalog
+- columnar storage
+- parquet
+- apache spark
+- batch processing
+- real-time analytics
+- data governance
+summary_prompt: 'Summarize this paper in 3 concise bullet points. Focus on the relevance
+  for a Data Engineer building pipelines and infrastructure. Highlight: scale problem
+  solved, proposed technique, and performance benchmarks.'
+max_papers: 15
+telegram_token_env: TELEGRAM_BOT_TOKEN_DATA_ENGINEER
+telegram_chat_id_env: TELEGRAM_CHAT_ID_DATA_ENGINEER

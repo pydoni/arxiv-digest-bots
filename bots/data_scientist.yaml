@@ -1,0 +1,35 @@
+name: Data Scientist
+emoji: 📊
+description: Relevant papers for those who model, experiment, and extract insights
+  from data
+arxiv_categories:
+- stat.ML
+- cs.LG
+- cs.AI
+- stat.AP
+keywords:
+- causal inference
+- causal
+- treatment effect
+- experimental design
+- bayesian
+- time series
+- uplift
+- counterfactual
+- propensity score
+- instrumental variable
+- difference in differences
+- survival analysis
+- hypothesis testing
+- a/b test
+- heterogeneous
+- double machine learning
+- regression discontinuity
+- observational
+- confound
+summary_prompt: 'Summarize this paper in 3 concise bullet points. Focus on the methodology
+  and statistical contribution for a Data Scientist. Highlight: problem addressed,
+  proposed method, and how it compares to baselines.'
+max_papers: 15
+telegram_token_env: TELEGRAM_BOT_TOKEN_DATA_SCIENTIST
+telegram_chat_id_env: TELEGRAM_CHAT_ID_DATA_SCIENTIST
