@@ -27,6 +27,22 @@ keywords:
 - regression discontinuity
 - observational
 - confound
+- neural network
+- deep learning
+- classification
+- regression
+- tabular
+- gradient boosting
+- xgboost
+- lightgbm
+- random forest
+- feature selection
+- anomaly detection
+- clustering
+- dimensionality reduction
+- transfer learning
+- semi-supervised
+- self-supervised
 summary_prompt: 'Summarize this paper in 3 concise bullet points. Focus on the methodology
   and statistical contribution for a Data Scientist. Highlight: problem addressed,
   proposed method, and how it compares to baselines.'
